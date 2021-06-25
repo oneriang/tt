@@ -84,24 +84,24 @@
     <script src="https://cdn.jsdelivr.net/npm/quasar@2.0.0/dist/icon-set/svg-fontawesome-v5.umd.prod.js"></script>
 
     <script>
-        import { ref } from 'vue'
+        
         /*
           Example kicking off the UI. Obviously, adapt this to your specific needs.
           Assumes you have a <div id="q-app"></div> in your <body> above
          */
         const app = Vue.createApp({
             setup() {
-                const leftDrawerOpen = ref(false)
-                const rightDrawerOpen = ref(false)
+                const leftDrawerOpen = false
+                const rightDrawerOpen = false
 
                 return {
                     leftDrawerOpen,
                     toggleLeftDrawer() {
-                        leftDrawerOpen.value = !leftDrawerOpen.value
+                        leftDrawerOpen = !leftDrawerOpen
                     },
                     rightDrawerOpen,
                     toggleRightDrawer() {
-                        rightDrawerOpen.value = !rightDrawerOpen.value
+                        rightDrawerOpen = !rightDrawerOpen
                     }
                 }
             }
